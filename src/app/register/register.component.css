@@ -1,0 +1,13 @@
+#img-bg {
+  background-image: url('https://');
+  min-height: 695px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-success:hover {
+  background-color: rgb(21, 216, 21);
+  color: rgb(55, 77, 55);
+}

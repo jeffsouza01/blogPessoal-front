@@ -1,0 +1,28 @@
+ul.social-network {
+  list-style: none;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0;
+  padding: 5%;
+}
+
+.fa {
+  font-size: 35pt;
+  color: white;
+  padding: 10%;
+}
+
+.fa-facebook-square:hover {
+  color: cornflowerblue;
+}
+
+.fa-github:hover {
+  color: slategrey
+}
+
+.fa-linkedin-square:hover {
+  color: dodgerblue;
+}
