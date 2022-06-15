@@ -1,12 +1,12 @@
 ul.social-network {
   list-style: none;
-  padding: 0;
+  padding: 5%;
 }
 
 ul.social-network li {
-  display: inline;
+  display: inline-block;
   margin: 0;
-  padding: 5%;
+  padding: 0%;
 }
 
 .fa {
@@ -19,7 +19,7 @@ ul.social-network li {
   color: cornflowerblue;
 }
 
-.fa-github:hover {
+.fa-instagram:hover {
   color: slategrey
 }
 
