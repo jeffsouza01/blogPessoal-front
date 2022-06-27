@@ -24,6 +24,11 @@ export class AuthService {
     return this.http.post<User>('http://localhost:8090/users/register', user );
   }
 
+  getByIdUser(id: number): Observable<User> {
+
+    return this.http.get<User>(`http://localhost:8090/users/${id}` );
+  }
+
   logged() {
     let ok: boolean = false
 
