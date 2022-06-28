@@ -1,3 +1,4 @@
+
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -18,10 +19,22 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<Postagem[]> {
-    return this.http.get<Postagem[]>("http://localhost:8090/postagem", this.token)
+    return this.http.get<Postagem[]>("http://localhost:8090/postagem", this.token);
+  }
+
+  getByIdPostagem(id: number): Observable<Postagem> {
+    return this.http.get<Postagem>(`http://localhost:8090/postagem/${id}`)
   }
 
   newPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.post<Postagem>('http://localhost:8090/postagem', postagem, this.token)
+    return this.http.post<Postagem>('http://localhost:8090/postagem', postagem, this.token);
+  }
+
+  updatePostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.put<Postagem>('http://localhost:8090/postagem', postagem, this.token)
+  }
+
+  deletePostagem(id: number) {
+    return this.http.delete(`http://localhost:8090/postagem/${id}`)
   }
 }
