@@ -1,4 +1,3 @@
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -8,8 +7,10 @@ import { Postagem } from '../model/Postagem';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PostagemService {
 
+  apiURL: string = 'http://localhost:8090/postagem'
   constructor(
     private http: HttpClient
   ) { }
@@ -19,7 +20,7 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<Postagem[]> {
-    return this.http.get<Postagem[]>("http://localhost:8090/postagem", this.token);
+    return this.http.get<Postagem[]>(this.apiURL, this.token);
   }
 
   getByIdPostagem(id: number): Observable<Postagem> {

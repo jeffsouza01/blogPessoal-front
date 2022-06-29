@@ -11,10 +11,10 @@
        class="img-fluid rounded-circle " style="margin: 0 15px;">
       </li>
       <li class="nav-item pl-3">
-       <p class="m-0 font-weight-bold text-white fs-16  " style="margin: 0 15px;">{{name}}</p>
+       <p class="m-0 font-weight-bold text-white fs-16  " style="margin: 0 15px;"> Olá, {{name}}</p>
       </li>
       <li class="nav-item pl-3">
-          <a href="">
+          <a [routerLink]="['/user-id',id]">
           <p class="text-white fs-16 m-0">
             <i class="fa fa-pencil-square-o text-white fs-16" aria-hidden="true" style="margin: 0 15px;"></i>
           </p>
